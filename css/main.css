@@ -95,12 +95,13 @@ body {
   min-height: 100vh;
   position: relative;
   padding-bottom: 52px;
+  font-size: 18px;
 }
 
 .title {
   text-align: center;
   padding-top: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
   .title h1 {
@@ -124,14 +125,15 @@ body {
   }
 
 .body-text {
-  margin: 0 auto;
+  margin: 0 auto 32px;
   position: relative;
   z-index: 10;
 }
 
 .polina {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 32px;
+  width: 240px;
 }
 
 .moon {
@@ -140,10 +142,74 @@ body {
   top: 0;
 }
 
-.clouds {
+.gofundme-logo {
+  display: block;
+  margin: 24px auto;
+  width: 100px;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: rocket 35s infinite ease-out;
+  z-index: -10;
+}
+
+@keyframes rocket {
+  from {
+    bottom: 0;
+    right: 0;
+    transform: scale(1.5);
+  }
+  to {
+    bottom: 100%;
+    right: 50%;
+    transform: scale(0);
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .moon {
+    width: 100px;
+  }
+
+  .polina {
+    width: 150px;
+  }
+
+  .gofundme-logo {
+    margin-bottom: 40px;
+  }
+}
+
+.clouds-l {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.clouds-r {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btn-custom,
+.btn-custom:active {
+  padding: 8px 24px;
+  background: linear-gradient(280deg, #FF5348 13.18%, #FFA048 89.46%) no-repeat !important;
+  box-shadow: 0px 0px 16px 8px rgba(249, 137, 5, 0.32);
+  border-radius: 66px;
+  border: none;
+  color: #FFF;
+  font-size: 1.4em;
+  transition-duration: 0.5s;
+}
+
+.btn-custom:hover {
+  color: #FFF;
+  box-shadow: 0px 0px 16px 16px rgba(249, 137, 5, 0.35);
 }
 
 
